@@ -1,0 +1,168 @@
+header {
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgb(1,42,74);
+    background: linear-gradient(83deg, rgba(1,42,74,1) 0%, rgba(1,73,124,1) 50%, rgba(42,111,151,1) 100%);
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+.nav_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+
+}
+.logo{
+    gap: 5px;
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+.logo fa-icon{
+    font-size: 200%;
+    text-justify: auto;
+}
+.tab-nav{
+    outline: none;
+    display: none;
+}
+.label{
+    display: none;
+    color: white;
+}
+.burger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+}
+.content_nav{
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.content_nav li{
+    display: inline-block;
+    padding-right: 10px;
+
+
+}
+.content_nav li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.content_nav li a::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0,1);
+    transition: transform ease-in-out 0.5s;
+}
+.content_nav li a:hover::after{
+    transform: scale(1,1);
+}
+
+.submenu {
+    display: none;
+    position: absolute; /* Para asegurarte de que no afecte el flujo del documento */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 110%; /* Posiciona el submenú justo debajo del elemento padre */
+    left: 0;
+}
+.develop {
+    position: relative;
+}
+
+/* Muestra el submenu cuando el padre es hover */
+.develop:hover .submenu {
+    display: block;
+}
+
+/* Ajusta el estilo del submenu según tus necesidades */
+.submenu li {
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(83deg, rgba(1,42,74,1) 0%, rgba(1,73,124,1) 50%, rgba(42,111,151,1) 100%);
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+}
+
+.submenu li a:hover {
+    background-color: rgba(1,73,124,1); /* Ajusta el color según tus necesidades */
+}
+@media screen and (max-width: 1280px){
+    .container{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 770px) {
+    .label{
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .content_nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.6;
+    }
+    .nav_checkbox input:checked ~ .content_nav{
+        max-height: 500px;
+    }
+    .content_nav li{
+        padding: 15px 0px;
+    }
+    
+
+    .develop{
+        align-items: center;
+
+    }
+
+    .develop .submenu {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        left: 0; /* Este mantiene la funcionalidad hover para pantallas más grandes */
+    }
+    .submenu li {
+    padding: 0;
+    width: 100%;background: rgba(1, 42, 74, 0);
+}
+.submenu li a:hover {
+    background-color: rgba(1, 73, 124, 0.579); /* Ajusta el color según tus necesidades */
+}
+    
+}

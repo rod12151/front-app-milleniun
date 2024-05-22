@@ -1,0 +1,34 @@
+<div class="auth-container">
+
+
+
+
+
+    <div class="auth-content">
+        @if (botonLogin) {
+        <div>
+            <div>
+                <app-login></app-login>
+                <span>¿no tienes una cuenta? <span class="link" (click)="RegisterBoton()">Regístrate
+                        ahora</span></span>
+
+
+            </div>
+            <div></div>
+        </div>
+
+
+
+        }
+        @if (botonregister) {
+        <app-register></app-register>
+        <label>¿ya tienes una cuenta? <label class="link" (click)="LoginBoton()">Inicia Sesion</label></label>
+
+
+
+
+        }
+
+
+    </div>
+</div>

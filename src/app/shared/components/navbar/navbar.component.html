@@ -1,0 +1,38 @@
+<header>
+    <div class="container">
+        <nav class="nav_checkbox">
+            <a href="#" class="logo">
+                <fa-icon [icon]="icon"></fa-icon>
+                <h2>LOGO</h2>
+            </a>
+            <input type="checkbox" id="tab-nav" class="tab-nav">
+            <label for="tab-nav" class="label">
+                <div class="burger"></div>
+                <div class="burger"></div>
+                <div class="burger"></div>
+            </label>
+            <ul class="content_nav">
+                <li><a routerLink="dashboard">HOME</a></li>
+                <li class="develop"><a href="">CURSOS</a>
+                    <ul class="submenu">
+                        <li><a href="#">ACTUALIZACION</a></li>
+                        <li><a href="#">ESPECIALIZACION</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">DIPLOMADOS</a></li>
+                <li><a href="#">SERVICIOS</a></li>
+                @if (isLogin()) {
+                    <li><a routerLink="" (click)="logout()">cerrar Sesion </a></li>
+                }
+                @if(!isLogin()){
+                    <li><a routerLink="auth">LOGIN</a></li>                
+                
+                }
+                
+
+            </ul>
+        </nav>
+
+    </div>
+</header>

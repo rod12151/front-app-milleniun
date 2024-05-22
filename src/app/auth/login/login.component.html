@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center">
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title mb-3">INICIO DE SESION</h5>
+            <form [formGroup]="form" (submit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electronico</label>
+                    <input type="correo" id="correo" class="form-control" formControlName="correo" placeholder="Ingrese Correo">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" id="password" class="form-control" formControlName="password" placeholder="password">
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="form.invalid">Ingresar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
