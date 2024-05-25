@@ -1,0 +1,198 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 255px;
+  padding: 5px;
+  background: rgb(169, 214, 229);
+  background: radial-gradient(circle, rgba(169, 214, 229, 1) 0%, rgba(137, 194, 217, 1) 25%, rgba(97, 165, 194, 1) 50%, rgba(70, 143, 175, 1) 100%);
+}
+
+.reviews p {
+  width: 100%;
+  height: 255px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+  text-align: justify;
+  color: white;
+  scrollbar-width: none;
+  
+
+}
+
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 400px;
+  gap: 5px;
+  margin: 10px;
+  padding: 1rem;
+  background: rgb(169, 214, 229);
+  background: radial-gradient(circle, rgba(169, 214, 229, 1) 0%, rgba(137, 194, 217, 1) 25%, rgba(97, 165, 194, 1) 50%, rgba(70, 143, 175, 1) 100%);
+
+}
+
+.card-title {
+
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 0px;
+}
+
+.avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  box-shadow: 0 0 16px rgba(254, 255, 255, 0.938);
+
+}
+.avatar img:hover{
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+/*
+.icons:hover{
+  color: white;
+  cursor: pointer;
+  
+}
+.avatar:hover fa-icon {
+  color: white;
+}
+.gender fa-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.gender {
+  height: auto;
+  width: auto;
+  border-radius: 100%;
+  text-align: center;
+}*/
+
+.card-cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 255px;
+  padding: 5px;
+}
+
+.names,
+.especialidad {
+  height: 100%;
+  width: 100%;
+}
+
+
+.especialidad p {
+  height: 40px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.names p {
+  height: 40px;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+.image {
+  flex: 1;
+  top: 0;
+  width: 120px;
+  height: 160px;
+  justify-content: center;
+}
+
+.image img {
+  width: 120px;
+  height: 160px;
+
+}
+
+.card-pie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+}
+
+.card-pie a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background: rgba(169, 214, 229, 1);
+  text-align: center;
+  transition: all 300ms ease;
+  border-radius: 100%;
+  box-shadow: 0 0 20px rgba(108, 241, 230, 0.877);
+
+  align-items: center;
+}
+
+.card-pie a:hover {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+.card-butons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+}
+
+.card-cuerpo p {
+  text-align: center;
+  font-weight: bolder;
+  align-content: center;
+}
+
+.card-cuerpo:hover .names,
+.card-cuerpo:hover .especialidad {
+  display: none;
+
+}
+
+.card-cuerpo:hover img {
+  height: 234px;
+  width: 166px;
+
+  border-radius: 10%;
+  transition: ease-in-out 1s ease-out;
+}
+
+.card-cuerpo:hover .image {
+  height: 234px;
+  width: 166px;
+  transition: ease-in-out 1s ease-out;
+}

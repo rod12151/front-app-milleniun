@@ -1,0 +1,81 @@
+:host * {
+    transition: all 500ms ease-in-out;
+}
+
+.sidenav-header {
+    padding-top: 24px;
+    text-align: center;
+
+
+}
+
+.sidenav-header img {
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.header-text {
+    height: 3rem;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 0.8rem;
+
+}
+
+.hide-header-text {
+    opacity: 0;
+    height: 0;
+
+}
+
+.menu-item {
+    border-left: 5px solid;
+    border-left-color: rgb(0, 0, 0, 0);   
+}
+
+.select-menu-item {
+    border-left-color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.377);
+}
+
+
+.sidenav-header img:hover {
+    cursor: pointer;
+
+}
+.barra-lateral{
+    min-height: calc(100vh - 390px);
+    background: rgb(1,42,74);
+    background: linear-gradient(356deg, rgba(1,73,124,1) 0%,rgba(42,111,151,1) 25%, rgba(42,111,151,1) 50%,rgba(42,111,151,1) 75%, rgba(1,73,124,1) 100%);
+    border-radius: 1px;
+    
+}
+
+mat-nav-list span{
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(250, 248, 248, 0.671);
+}
+mat-icon{
+    color: black;
+    font-weight: lighter;
+}
+
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--selected.mdc-list-item--with-leading-icon .mdc-list-item__start, .mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated.mdc-list-item--with-leading-icon .mdc-list-item__start{
+    color:  rgb(255, 255, 255);
+}
+.mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--selected .mdc-list-item__primary-text, .mat-mdc-list-base.mat-mdc-list-base .mdc-list-item--activated .mdc-list-item__primary-text{
+    color:  rgb(255, 255, 255);
+    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.671);
+}

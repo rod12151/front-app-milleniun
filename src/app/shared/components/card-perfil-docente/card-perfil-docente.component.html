@@ -1,0 +1,83 @@
+<!--<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar style="background-image: [src]=(safeUrl);"></div>
+
+        <mat-card-title>{{perfil?.name}}</mat-card-title>
+        <mat-card-subtitle>{{perfil?.lastName}} </mat-card-subtitle>
+    </mat-card-header>
+    <img class="image" mat-card-image [src]="safeUrl ">
+    <mat-card-content>
+        <p>{{perfil?.review}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>
+-->
+
+<div class="container">
+    <div class="card">
+        <div class="card-title">
+            @if (review) {<div class="avatar" (click)="verReview()">
+                <img [src]="safeUrl" alt="">
+            </div>}@else {<div class="avatar" (click)="verReview()">
+                <img  src="assets/images/pluma.PNG">
+            </div>
+
+            }
+            
+            
+            <!--
+            <div class="avatar" (click)="verReview()">
+                @if (review) {
+                <a> <fa-icon [class]="'icons'" class="fa-2x" [icon]=iconRet></fa-icon></a>}@else {
+                <a> <fa-icon [class]="'icons'" class="fa-2x" [icon]=iconBio></fa-icon></a>
+                }
+
+            </div>
+
+            <div class="gender">
+                @if (perfil?.genero=="MASCULINO") {<fa-icon [class]="'icons'" class="fa-2x" [icon]=iconVa></fa-icon>}
+                @else if (perfil?.genero=="FEMENINO") {<fa-icon style="color: rgb(224, 6, 79); " class="fa-2x"
+                    [icon]=iconMu></fa-icon>}
+                @else {<fa-icon [class]="'icons'" style="color: rgb(255, 239, 9);" class="fa-2x"
+                    [icon]=iconNeu></fa-icon>}
+
+
+            </div>-->
+        </div>
+        @if (!review){
+        <div class="card-cuerpo">
+            <div class="names">
+                <p>{{perfil?.name}} {{perfil?.lastName}}</p>
+            </div>
+            <div class="image">
+
+                <img [src]="safeUrl" alt="">
+            </div>
+            <div class="especialidad">
+                <p>{{perfil?.especialidad}}
+                </p>
+            </div>
+        </div>}
+        @if (review)
+        {<div class="reviews">
+            @if (perfil!=undefined) {
+            <p>{{truncateText(perfil.review,200)}} </p>
+        }
+        </div>}
+        <div class="card-pie">
+            <a href="#"><fa-icon class="fa-2x" [icon]=iconXTu></fa-icon></a>
+            <a href="#"><fa-icon class="fa-2x" [icon]=iconWha></fa-icon></a>
+            <a href="#"><fa-icon class="fa-2x" [icon]=iconGog></fa-icon></a>
+        </div>
+        <div class="card-butons">
+            <button type="button" class="btn btn-primary">ver</button>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,23 @@
+<div class="todo">
+  <div class="content">
+   
+    <div class="container">
+      @for (item of menuItems(); track $index) {
+      <div class="item" routerLink='"item.route"' (click)="redirect(item.route)" >
+        <div class="card">
+          <div class="title">
+            <h3>{{item.label}} </h3>
+          </div>
+
+          <div routerLink="item.route" class="icon">
+            <fa-icon class="fa-8x" [icon]=item.icon></fa-icon>
+          </div>
+        </div>
+      </div>
+      }
+
+
+
+    </div>
+  </div>
+</div>

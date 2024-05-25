@@ -1,10 +1,27 @@
-<div>
-    <div>
-        <h1>SideBar</h1>
-    </div>
-    <div>
-        <h2>content</h2>
-        <router-outlet></router-outlet>
 
-    </div>
-</div>
+<mat-toolbar class="mat-elevation-z3" [class.class-touch]="collapsed()" >
+    <button (click)="collapsed.set(!collapsed())">
+        @if (collapsed()) {
+            <fa-icon [icon]=iconArrowRight></fa-icon>
+        }@if (!collapsed()) {
+            <fa-icon [icon]=iconArrowLeft></fa-icon>
+        }
+        
+    </button>
+        
+   
+
+</mat-toolbar>
+<mat-sidenav-container >
+    <mat-sidenav mode="side" opened [style.width]="sidenavWidth()">
+        
+        <app-sidebar [collapsed]="collapsed()"></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content"[style.margin-left]="sidenavWidth()">
+        
+            <router-outlet></router-outlet>
+       
+    
+    </mat-sidenav-content>
+</mat-sidenav-container>

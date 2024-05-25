@@ -1,0 +1,36 @@
+.content{
+    margin: 1rem;
+}
+
+.container {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    column-gap: 16px; /* Espacio entre los elementos */
+  }
+
+  .item {
+    background-color: lightblue; /* Solo para visualización */
+    padding: 20px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    gap:  1rem;
+    margin: 1rem;
+}
+.boton{
+    margin-top: 1rem;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem,1fr));
+    justify-content: center;
+}
+.form-label{
+    color: black;
+    font-weight: bolder;
+}

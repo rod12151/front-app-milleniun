@@ -6,5 +6,6 @@ export interface docenteResponse{
     email:String,
     avatar:String,
     genero:String,
-    
+    review:String
+    especialidad:String
 }
