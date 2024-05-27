@@ -10,12 +10,13 @@ import { AdminEstudianteComponent } from './pages/admin/admin-estudiante/admin-e
 import { AdminCursoComponent } from './pages/admin/admin-curso/admin-curso.component';
 import { AddDocenteComponent } from './pages/admin/admin-docente-components/add-docente/add-docente.component';
 import { AdminListDocenteComponent } from './pages/admin/admin-docente-components/admin-list-docente/admin-list-docente.component';
+import { PublicPageComponent } from './pages/public/public-page/public-page.component';
 
 export const routes: Routes = [
     {
         path: '', component: PublicLayoutComponent,
         children: [
-            { path: '', redirectTo: '', pathMatch: 'full' },
+            {path:'',component:PublicPageComponent}
 
 
         ]

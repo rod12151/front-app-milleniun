@@ -40,11 +40,10 @@
 .card-title {
 
   gap: 1rem;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 160px;
   height: 0px;
 }
 
@@ -59,8 +58,7 @@
 
 }
 .avatar img:hover{
-  height: 50px;
-  width: 50px;
+  scale: 1.5;
   cursor: pointer;
 }
 /*
