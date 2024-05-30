@@ -1,0 +1,39 @@
+.pagination {
+    margin: 20px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination button {
+    width: 80px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+
+    transition: background-color 0.3s ease;
+}
+
+.button-enabled {
+    background-color: rgb(255, 255, 255);
+    color:rgb(1, 42, 74); 
+    border-color: rgb(1, 42, 74);
+    
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.button-enabled:hover {
+    background-color: rgb(1, 42, 74);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+}
+span{
+    font-weight: bold;
+    color:  rgb(1, 42, 74);
+}

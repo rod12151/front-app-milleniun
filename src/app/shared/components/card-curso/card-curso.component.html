@@ -1,0 +1,35 @@
+@if (curso!=undefined) {
+<div class="container">
+    <div class="card">
+        <div class="card-title">
+            <p>{{curso.modalidad}}</p>
+            <img [src]="curso.image" alt="">
+        </div>
+        <div class="card-cuerpo">
+            <div class="nombre">
+                <h2>{{curso.nombre}}</h2>
+            </div>
+            <div class="review">
+                <p>{{curso.detalle}}</p>
+
+            </div>
+            <div class="card-avatar-fecha">
+                <div class="avatar">
+                    <app-avatar [perfiles]="docentes"></app-avatar>
+                </div>
+                <div class="fecha">
+                    <fa-icon [icon]=calendarIcon></fa-icon>
+                    <p>{{optenerFecha(curso.fechaInicio+'')}}</p>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="card-pie">
+
+            <button>Ver Detalles</button>
+        </div>
+        
+    </div>
+</div>
+}

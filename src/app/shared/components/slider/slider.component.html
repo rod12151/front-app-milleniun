@@ -1,0 +1,14 @@
+<div class="slider-container">
+    <button (click)="prev()">&#10094;</button>
+    <div class="slider">
+      <div class="slider-card" *ngFor="let card of cards; let i = index" [class.active]="i === currentIndex"
+     >
+        <div class="card-body">          
+          <app-card-perfil-docente [perfil]="card"></app-card-perfil-docente>
+        </div>
+      </div>
+    </div>
+    <button (click)="next()">&#10095;</button>
+  </div>
+
+  

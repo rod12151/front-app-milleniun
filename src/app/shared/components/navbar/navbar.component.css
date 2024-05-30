@@ -1,7 +1,7 @@
 header {
     top: 0;
     z-index: 5;
-    width: 100%;
+    width:100%;
     background: rgb(1,42,74);
     background: linear-gradient(83deg, rgba(1,42,74,1) 0%, rgba(1,73,124,1) 50%, rgba(42,111,151,1) 100%);
 }

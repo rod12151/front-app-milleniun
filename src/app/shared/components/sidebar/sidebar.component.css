@@ -54,7 +54,7 @@
 
 }
 .barra-lateral{
-    min-height: calc(100vh - 390px);
+    min-height: 100%;
     background: rgb(1,42,74);
     background: linear-gradient(356deg, rgba(1,73,124,1) 0%,rgba(42,111,151,1) 25%, rgba(42,111,151,1) 50%,rgba(42,111,151,1) 75%, rgba(1,73,124,1) 100%);
     border-radius: 1px;

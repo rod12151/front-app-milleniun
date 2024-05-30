@@ -1,1 +1,31 @@
-<p>public-page works!</p>
+<div class="container">
+<div>
+    hola esto es una presentacion
+</div>
+<div>
+    
+    <app-slider [cards]="responseList"></app-slider>
+    <br>
+    
+    
+</div>
+
+<div class="seccion">
+    <p class="seccion-title">Nuestros Docentes</p>
+    <app-admin-list-docente></app-admin-list-docente>
+</div>
+
+</div>
+<section>
+    <app-slider-primeng [list]="responseList"></app-slider-primeng>
+</section>
+<section>
+    <app-avatar [perfiles]="responseList"></app-avatar>
+</section>
+<section>
+    <app-card-curso-primeng [curso]="curso" [docetes]="responseList"></app-card-curso-primeng>
+</section>
+<section>
+    <app-card-curso [curso]="curso" [docentes]="responseList"></app-card-curso>
+</section>
+

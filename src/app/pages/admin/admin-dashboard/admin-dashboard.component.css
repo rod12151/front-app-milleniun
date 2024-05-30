@@ -1,52 +1,56 @@
-.content{
-    min-height: calc(100vh - 390px);
-    max-height: calc(100vh - 390px);
-    background: rgb(250,250,255);
+.content {
+    min-height: auto;
+    max-height: auto;
+    background: rgb(250, 250, 255);
     max-width: 100%;
-background: radial-gradient(circle, rgba(250,250,255,1) 0%, rgba(238,240,242,1) 25%, rgba(236,235,228,1) 50%, rgba(218,221,216,1) 100%);
+    background: radial-gradient(circle, rgba(250, 250, 255, 1) 0%, rgba(238, 240, 242, 1) 25%, rgba(236, 235, 228, 1) 50%, rgba(218, 221, 216, 1) 100%);
     display: flex;
     justify-content: center;
 
 }
-mat-toolbar{
+
+mat-toolbar {
     position: absolute;
     z-index: 3;
     width: 35px;
     height: 35px;
-    left:  250px;
+    left: 250px;
 
     border-radius: 100%;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     transition: all 500ms ease-in-out;
-    
+
 }
-.class-touch{
+
+.class-touch {
     left: 64px;
     transition: all 500ms ease-in-out;
 }
-mat-sidenav-container{
-   min-height: calc(100vh - 390px);
+
+mat-sidenav-container {
+    min-height: auto;
 }
-mat-sidenav,mat-sidenav-content{
+
+mat-sidenav,
+mat-sidenav-content {
     transition: all 500ms ease-in-out;
 
 }
 
-mat-toolbar button{
+mat-toolbar button {
     border-radius: 100%;
     color: rgb(8, 55, 156);
     border: none;
     opacity: 0.5;
- }
- mat-toolbar button:hover{
-    
+}
+
+mat-toolbar button:hover {
+
     color: rgb(4, 22, 61);
-    
+
     opacity: 1;
- }
-
-
+}

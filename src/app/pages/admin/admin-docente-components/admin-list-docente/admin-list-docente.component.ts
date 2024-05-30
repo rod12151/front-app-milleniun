@@ -35,7 +35,7 @@ export class AdminListDocenteComponent implements OnInit {
       review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
     },
     {
-      id: 1,
+      id: 3,
       dni: '00000001',
       name: 'Jhoe',
       lastName: 'Doe Doe',
@@ -46,7 +46,7 @@ export class AdminListDocenteComponent implements OnInit {
       review: 'corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
     },
     {
-      id: 2,
+      id: 5,
       dni: '00000002',
       name: 'josefina blanca',
       lastName: 'quintanilla velarde de rimac',
@@ -56,7 +56,7 @@ export class AdminListDocenteComponent implements OnInit {
       genero: 'FEMENINO',
       review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
     },{
-      id: 1,
+      id: 12,
       dni: '00000001',
       name: 'Jhoe',
       lastName: 'Doe Doe',
@@ -67,7 +67,7 @@ export class AdminListDocenteComponent implements OnInit {
       review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
     },
     {
-      id: 2,
+      id: 21,
       dni: '00000002',
       name: 'prueba',
       lastName: 'prueba prueba',

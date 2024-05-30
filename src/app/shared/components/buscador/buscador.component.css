@@ -1,0 +1,48 @@
+.container-buscador{
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.icono{
+    font-size: 30px;
+    color: rgb(28, 79, 117);
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.icono:hover{
+    
+    color: rgb(252, 252, 252);
+    text-shadow: 5px 5px rgb(28, 79, 117)
+    
+    
+}
+.input{
+    height: 50px;
+    width: 300px;
+}
+.input input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    background-color: rgb(28, 79, 117);
+    color: #000000;
+    font-weight: bolder;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .input input:focus {
+    background-color: rgb(255, 255, 255);
+    border-color: #59def0;
+    box-shadow: 0 0 10px rgb(28, 79, 117), 0 0 20px rgb(28, 79, 117), 0 0 30px rgb(28, 79, 117), 0 0 40px rgb(28, 79, 117);
+  }
+  
+  .input input:focus::placeholder {
+    font-weight: bolder;
+    color: #000000;
+  }

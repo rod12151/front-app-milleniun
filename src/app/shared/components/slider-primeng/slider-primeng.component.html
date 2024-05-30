@@ -1,0 +1,29 @@
+
+    <div class="card">
+        @if (list!=undefined) {
+        <p-carousel 
+            [value]="list" 
+            [numVisible]="4" 
+            [numScroll]="3" 
+            [circular]="false" 
+            [responsiveOptions]="responsiveOptions"
+            >
+                <ng-template let-product pTemplate="item">
+                    <div class="border-1 surface-border border-round m-1 p-1">
+                        <div class="mb-2">
+                            <app-card-perfil-docente [perfil]="product"></app-card-perfil-docente>
+                            
+                        </div>
+
+                    </div>
+                    
+                </ng-template>
+                <ng-template pTemplate="footer">
+                    <p class="enlace">ver mas cursos</p>
+                </ng-template>
+                
+                
+        </p-carousel>
+    }
+    </div>
+

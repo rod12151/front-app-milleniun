@@ -1,0 +1,23 @@
+<div class="pagination">
+    <button 
+    (click)="changePage(0)"
+    [class.button-enabled]=!data.first
+    [disabled]="data.first">Primero
+  </button>
+    <button 
+    (click)="changePage(data.number - 1)" [class.button-enabled]=!data.first
+    
+    [disabled]="data.first">Anterior
+  </button>
+    <span>Página {{data.number + 1}} de {{data.totalPages}}</span>
+    <button 
+    (click)="changePage(data.number + 1)" [class.button-enabled]=!data.last
+      
+    [disabled]="data.last">Siguiente
+  </button>
+    <button 
+    (click)="changePage(data.totalPages - 1)" 
+    [class.button-enabled]=!data.last
+    [disabled]="data.last">Ultimo
+  </button>
+  </div>

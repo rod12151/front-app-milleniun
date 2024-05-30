@@ -1,0 +1,19 @@
+<div class="container-buscador">
+    <div class="input">
+        <input type="text"
+        placeholder="buscar"
+        (input)="filtrarLetras($event)"
+        #SearchInput
+        
+        
+        (ended)="changename(SearchInput.value)">
+        
+    </div>
+    <div class="icon" (click)="changename(SearchInput.value)">
+        <a> <fa-icon [icon]=iconSearch class="icono"></fa-icon>
+
+        </a>
+    </div>
+   
+
+</div>

@@ -1,0 +1,27 @@
+@if (dataAvatar!=undefined) {
+<div class="container">
+    <div class="grupo-avatar">
+        @for (item of dataAvatar; track item.id) {
+        <div class="grup">
+            @if(labelShow==item.id){
+                <p class="label" >{{item.name}}</p>
+            }
+            
+            <div class="imagen" (mouseenter)="entra(item.id)" (mouseleave)="sale()">
+                <img [src]="optenerUrlSegurp(item.avatar)" />
+            </div>
+
+        </div>
+
+
+        }
+        @if (num>0) {
+        <div class="span">
+            <span>+{{num}} </span>
+        </div>
+        }
+
+
+    </div>
+</div>
+}

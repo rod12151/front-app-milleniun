@@ -1,0 +1,19 @@
+.enlace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(1, 43, 82);
+    text-align: center;
+    font-weight: bold;
+}
+.card{
+    margin: 1rem;
+    padding: auto;
+    background: rgba(255, 0, 0, 0.288);
+}
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

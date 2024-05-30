@@ -1,0 +1,24 @@
+<div class="curso-list">
+  @if (paginationRequest) {
+    <div>
+      <app-buscador class="paginator" (pageChange)="onNameSearch($event)"></app-buscador>
+    </div>
+  <div class="list-cuerpo grid-container" >
+    @for (item of datosCurso; track item.id) {
+
+    <app-card-curso [curso]="item"  class="curso-card"></app-card-curso>
+    
+
+
+    }
+  </div>
+
+  <div class="paginator">
+    <app-pagination [data]="paginationRequest" (pageChange)="onPageCahnge($event)"></app-pagination>
+  </div>
+
+
+  }@else {
+  <div class="loading-container">Loading....</div>
+  }
+</div>

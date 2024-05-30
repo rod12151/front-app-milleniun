@@ -2,6 +2,15 @@
 div{
     overflow-y: inherit;
 }
+
+main{
+    background: rgba(0, 255, 234, 0.479);
+    margin: 0;
+    
+}
+nav{
+    z-index: 1000;
+}
   
 
   

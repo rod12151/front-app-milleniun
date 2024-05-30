@@ -1,0 +1,11 @@
+.seccion{
+    padding:auto;
+    display: flex;
+    flex-direction: column;
+}
+.seccion-title{
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}

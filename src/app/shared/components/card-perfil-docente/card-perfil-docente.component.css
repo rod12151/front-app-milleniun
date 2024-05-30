@@ -60,6 +60,7 @@
 .avatar img:hover{
   scale: 1.5;
   cursor: pointer;
+  border: rgba(0, 255, 234, 0.479);
 }
 /*
 .icons:hover{
