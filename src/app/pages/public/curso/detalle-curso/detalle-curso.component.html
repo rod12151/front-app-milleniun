@@ -1,0 +1,27 @@
+<!-- datos-details.component.html -->
+<div class="datos-details">
+    <div class="datos-header">
+      <h1>{{ datosCurso?.nombre }}</h1>
+      <p>{{ datosCurso?.detalle }}</p>
+      <div class="preview-video">
+        <video controls>
+          <source [src]="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <!--<div class="datos-content" *ngIf="userStatus === 'purchased'">
+      <h2>datos Content</h2>
+      <div *ngFor="let session of datos.sessions">
+        <h3>{{ session.title }}</h3>
+        <ul>
+          <li *ngFor="let classItem of session.classes">{{ classItem.title }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="datos-cta" *ngIf="userStatus !== 'purchased'">
+      <p *ngIf="userStatus === 'registered'">Purchase this datos to get full access!</p>
+      <p *ngIf="userStatus === 'guest'">Register and purchase to get full access!</p>
+    </div>
+  </div>-->
+  

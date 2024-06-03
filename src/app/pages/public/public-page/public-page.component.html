@@ -2,30 +2,21 @@
 <div>
     hola esto es una presentacion
 </div>
-<div>
-    
-    <app-slider [cards]="responseList"></app-slider>
-    <br>
-    
-    
-</div>
 
-<div class="seccion">
-    <p class="seccion-title">Nuestros Docentes</p>
-    <app-admin-list-docente></app-admin-list-docente>
-</div>
+<section>
+    @if (datosCursoActualizacion!=undefined) {
+        <app-slider-curso-primeng 
+        [datosAdicionales]="datosAdicionalesActualizacion" [listaDocenteAndCurso]="datosCursoActualizacion"
+        ></app-slider-curso-primeng>
 
-</div>
+    }
+    
+    </section>
 <section>
-    <app-slider-primeng [list]="responseList"></app-slider-primeng>
+    <app-slider-curso-primeng [datosAdicionales]="datosAdicionalesDiplomado" [listaDocenteAndCurso]="datosCursoDiplomado"></app-slider-curso-primeng>
 </section>
+
 <section>
-    <app-avatar [perfiles]="responseList"></app-avatar>
-</section>
-<section>
-    <app-card-curso-primeng [curso]="curso" [docetes]="responseList"></app-card-curso-primeng>
-</section>
-<section>
-    <app-card-curso [curso]="curso" [docentes]="responseList"></app-card-curso>
+    <app-slider-curso-primeng [datosAdicionales]="datosAdicionalesEspecializacion" [listaDocenteAndCurso]="datosCursoEspecializacion"></app-slider-curso-primeng>
 </section>
 

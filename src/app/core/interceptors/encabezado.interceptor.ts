@@ -1,7 +1,7 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { LoginService } from '../services/auth/login.service';
 import { inject } from '@angular/core';
-import { urlsToSkip } from './helpInterceptor';
+import { urlStatics, urlsToSkip } from './helpInterceptor';
 
 export const encabezadoInterceptor: HttpInterceptorFn = (req, next) => {
   const logSer=inject(LoginService)
@@ -9,8 +9,9 @@ export const encabezadoInterceptor: HttpInterceptorFn = (req, next) => {
   const urlWithoutParams = req.url.split('?')[0];
   const authToken=logSer.getToken();
 
+
   
-    if(!(url.includes(urlWithoutParams))){
+   /* if(!(url.includes(urlWithoutParams))){
       const authReq = req.clone({
         setHeaders:{
           Authorization:`Bearer ${authToken}`
@@ -19,10 +20,11 @@ export const encabezadoInterceptor: HttpInterceptorFn = (req, next) => {
       return next(authReq);
     }else{
       return(next(req))
-    }
- 
-  /*const authToken=logSer.getToken();
-    if(authToken!=null){
+    }  */
+
+    const url2 = urlStatics;
+    const match = url2.some(partStatic=>req.url.startsWith(partStatic));
+    if(!match){
       const authReq = req.clone({
         setHeaders:{
           Authorization:`Bearer ${authToken}`
@@ -31,9 +33,7 @@ export const encabezadoInterceptor: HttpInterceptorFn = (req, next) => {
       return next(authReq);
     }else{
       return(next(req))
-    }*/
-    
-    
+    }    
     
 
   

@@ -1,0 +1,359 @@
+
+
+cursoYDocentesEjemplos: cursoAndDocentes[] = [
+    {
+        curso: {
+            id: 1,
+            nombre: "Curso de TypeScript",
+            tag: "Desarrollo",
+            precio: 100,
+            tipoCurso: 'ESPECIALIZACION',
+            detalle: "Aprende TypeScript desde cero y domina sus características avanzadas.",
+            fechaInicio: "2024-06-01",
+            fechaFin: "2024-07-01",
+            modalidad: "Virtual",
+            duration: 30,
+            image: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-unity-full.jpg"
+        },
+        docentes: [
+            {
+                id: 1,
+                dni: "12345678",
+                name: "Juan",
+                lastName: "Pérez",
+                email: "juan.perez@example.com",
+                avatar: "https://www.google.com/imgres?q=dinosaurios%20foto%20perfil%20profesiones&imgurl=https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Felimparcial%2FCZ6AUK7AHNC4RB6C2C7YYWXXCQ.png&imgrefurl=https%3A%2F%2Fwww.elimparcial.com%2Flocurioso%2F2023%2F02%2F05%2Flos-dinosaurios-con-profesiones-obten-tu-foto-de-esta-viral-tendencia%2F&docid=D3YiWzO-297ETM&tbnid=Fc5T9jFDj9L5qM&vet=12ahUKEwiG5bads7aGAxX9r5UCHVeRBlgQM3oECCMQAA..i&w=1440&h=1433&hcb=2&ved=2ahUKEwiG5bads7aGAxX9r5UCHVeRBlgQM3oECCMQAA",
+                genero: "Masculino",
+                review: "Excelente docente con amplio conocimiento en TypeScript.",
+                especialidad: "Desarrollo Web"
+            },
+            {
+                id: 2,
+                dni: "87654321",
+                name: "María",
+                lastName: "González",
+                email: "maria.gonzalez@example.com",
+                avatar: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-unity-full.jpg",
+                genero: "Femenino",
+                review: "Muy buena explicando conceptos complejos de manera sencilla.",
+                especialidad: "Desarrollo Backend"
+            }
+        ]
+    },
+    {
+        curso: {
+            id: 2,
+            nombre: "Curso de React",
+            tag: "Desarrollo",
+            precio: 120,
+            tipoCurso: 'DIPLOMADO',
+            detalle: "Desarrolla aplicaciones web modernas con React.",
+            fechaInicio: "2024-07-10",
+            fechaFin: "2024-08-10",
+            modalidad: "Presencial",
+            duration: 40,
+            image: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-css3-full.jpg"
+        },
+        docentes: [
+            {
+                id: 3,
+                dni: "11223344",
+                name: "Carlos",
+                lastName: "López",
+                email: "carlos.lopez@example.com",
+                avatar: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-unity-full.jpg",
+                genero: "Masculino",
+                review: "Experto en React con más de 5 años de experiencia.",
+                especialidad: "Frontend"
+            },
+            {
+                id: 4,
+                dni: "44332211",
+                name: "Ana",
+                lastName: "Martínez",
+                email: "ana.martinez@example.com",
+                avatar: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-unity-full.jpg",
+                genero: "Femenino",
+                review: "Excelentes habilidades pedagógicas.",
+                especialidad: "UI/UX"
+            }
+        ]
+    },
+    {
+        curso: {
+            id: 3,
+            nombre: "Curso de Node.js",
+            tag: "Desarrollo",
+            precio: 150,
+            tipoCurso: 'ESPECIALIZACION',
+            detalle: "Construye servidores y API RESTful con Node.js.",
+            fechaInicio: "2024-08-15",
+            fechaFin: "2024-09-15",
+            modalidad: "Virtual",
+            duration: 45,
+            image: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-disena-con-xml-en-android-full.jpg"
+        },
+        docentes: [
+            {
+                id: 5,
+                dni: "55443322",
+                name: "Roberto",
+                lastName: "Fernández",
+                email: "roberto.fernandez@example.com",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+                genero: "Masculino",
+                review: "Amplia experiencia en desarrollo backend con Node.js.",
+                especialidad: "Backend"
+            }
+        ]
+    },
+    {
+        curso: {
+            id: 4,
+            nombre: "Curso de Angular",
+            tag: "Desarrollo",
+            precio: 110,
+            tipoCurso: 'DIPLOMADO',
+            detalle: "Desarrolla aplicaciones dinámicas con Angular.",
+            fechaInicio: "2024-09-20",
+            fechaFin: "2024-10-20",
+            modalidad: "Presencial",
+            duration: 35,
+            image: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-crea-tu-proyecto-web-responsive-con-html5-y-css3-full.jpg"
+        },
+        docentes: [
+            {
+                id: 6,
+                dni: "66778899",
+                name: "Laura",
+                lastName: "García",
+                email: "laura.garcia@example.com",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+                genero: "Femenino",
+                review: "Gran conocimiento en Angular y muy paciente con los estudiantes.",
+                especialidad: "Frontend"
+            },
+            {
+                id: 7,
+                dni: "99887766",
+                name: "Miguel",
+                lastName: "Torres",
+                email: "miguel.torres@example.com",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+                genero: "Masculino",
+                review: "Instructor excelente con pasión por la enseñanza.",
+                especialidad: "Full Stack"
+            }
+        ]
+    },
+    {
+        curso: {
+            id: 5,
+            nombre: "Curso de Python",
+            tag: "Desarrollo",
+            precio: 130,
+            tipoCurso: "DIPLOMADO",
+            detalle: "Aprende Python desde los fundamentos hasta las técnicas avanzadas.",
+            fechaInicio: "2024-10-01",
+            fechaFin: "2024-11-01",
+            modalidad: "Virtual",
+            duration: 50,
+            image: "https://formandocodigo.com/imagenes/cursos/iconos/icono-curso-curso-de-python-full.jpg"
+        },
+        docentes: [
+            {
+                id: 8,
+                dni: "22334455",
+                name: "Sofía",
+                lastName: "Ramos",
+                email: "sofia.ramos@example.com",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+                genero: "Femenino",
+                review: "Excelentes habilidades de comunicación y gran dominio de Python.",
+                especialidad: "Data Science"
+            },
+            {
+                id: 9,
+                dni: "55667788",
+                name: "David",
+                lastName: "Martínez",
+                email: "david.martinez@example.com",
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+                genero: "Masculino",
+                review: "Muy profesional y excelente docente.",
+                especialidad: "Machine Learning"
+            },
+            {
+              id: 8,
+              dni: "22334455",
+              name: "Sofía",
+              lastName: "Ramos",
+              email: "sofia.ramos@example.com",
+              avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+              genero: "Femenino",
+              review: "Excelentes habilidades de comunicación y gran dominio de Python.",
+              especialidad: "Data Science"
+          },
+          {
+              id: 9,
+              dni: "55667788",
+              name: "David",
+              lastName: "Martínez",
+              email: "david.martinez@example.com",
+              avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGgoBK6fm5uFqA9tNAHmrfaH1CpbHqJWFXIw&s",
+              genero: "Masculino",
+              review: "Muy profesional y excelente docente.",
+              especialidad: "Machine Learning"
+          }
+        ]
+    }
+
+
+ responseList: docenteResponse[] = [
+
+    {
+      id: 1,
+      dni: '00000001',
+      name: 'maria Alejandra',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'none',
+      review: 'Derecho Procesal Familiar, Conciliadora Extrajudicial con especialidad en asuntos de Familia debidamente acreditada por el Ministerio de Justicia y Derechos Humanos. Terapeuta y Facilitadora Familiar con enfoque Sistémico y Terapia de la Infancia. Socia fundadora y Gerente General de la firma B&T Consultoría Legal. Asesora externa para firmas legales. Ponente y capacitadora académica.'
+    },
+    {
+      id: 2,
+      dni: '00000002',
+      name: 'prueba',
+      lastName: 'prueba prueba',
+      email: '00000002@usuario.prueba',
+      especialidad: 'tester',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 3,
+      dni: '00000001',
+      name: 'Jhoe',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'MASCULINO',
+      review: 'corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 4,
+      dni: '00000002',
+      name: 'josefina blanca',
+      lastName: 'quintanilla velarde de rimac',
+      email: '00000002@usuario.prueba',
+      especialidad: 'abogada de las afueras del cementerio',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    }, {
+      id: 5,
+      dni: '00000001',
+      name: 'Jhoe',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'MASCULINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 6,
+      dni: '00000002',
+      name: 'prueba',
+      lastName: 'prueba prueba',
+      email: '00000002@usuario.prueba',
+      especialidad: 'tester',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 7,
+      dni: '00000001',
+      name: 'Jhoe',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'none',
+      review: 'Derecho Procesal Familiar, Conciliadora Extrajudicial con especialidad en asuntos de Familia debidamente acreditada por el Ministerio de Justicia y Derechos Humanos. Terapeuta y Facilitadora Familiar con enfoque Sistémico y Terapia de la Infancia. Socia fundadora y Gerente General de la firma B&T Consultoría Legal. Asesora externa para firmas legales. Ponente y capacitadora académica.'
+    },
+    {
+      id: 8,
+      dni: '00000002',
+      name: 'prueba',
+      lastName: 'prueba prueba',
+      email: '00000002@usuario.prueba',
+      especialidad: 'tester',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 9,
+      dni: '00000001',
+      name: 'Jhoe',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'MASCULINO',
+      review: 'corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 21,
+      dni: '00000002',
+      name: 'josefina blanca',
+      lastName: 'quintanilla velarde de rimac',
+      email: '00000002@usuario.prueba',
+      especialidad: 'abogada de las afueras del cementerio',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    }, {
+      id: 11,
+      dni: '00000001',
+      name: 'Jhoe',
+      lastName: 'Doe Doe',
+      email: '00000001@admin.com',
+      especialidad: 'ADMIN',
+      avatar: 'https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      genero: 'MASCULINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    },
+    {
+      id: 24,
+      dni: '00000002',
+      name: 'prueba',
+      lastName: 'prueba prueba',
+      email: '00000002@usuario.prueba',
+      especialidad: 'tester',
+      avatar: 'https://images.pexels.com/photos/2023384/pexels-photo-2023384.jpeg?auto=compress&cs=tinysrgb&w=600',
+      genero: 'FEMENINO',
+      review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!'
+    }
+  ]
+  curso:cursoResponse={
+    
+      id: 5,
+      nombre: "Derecho Judicial",
+      tag:"diplomadoEspecialisado",
+      precio:200,
+      tipoCurso: "DIPLOMADO",
+      detalle: "Lorem, ipsum dolor sit Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporiLorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!s ipsa fugiat laudantium iure atque!amet consectetur adipisicing elit. Architecto incidunt aliquid a, officiis soluta nostrum ipsam repellat numquam vitae corporis perspiciatis ad. Hic, cumque corpoquam vitae corporis perspiciatis ad. Hic, cumque corporis ipsa fugiat laudantium iure atque!",
+      fechaInicio: "2024-06-02",
+      fechaFin: "2024-06-02",
+      modalidad: "PRESENCIAL",
+      duration: 16,
+      image:"https://images.pexels.com/photos/264905/pexels-photo-264905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    
+  }

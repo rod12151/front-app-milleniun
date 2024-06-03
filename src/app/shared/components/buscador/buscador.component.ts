@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { Component, EventEmitter, Output, inject, signal } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { ValidacionInput } from '../../utils/ValidacionInput';
+import { InputValidationsService } from '../../../core/services/helpers/input-validations.service';
 
 @Component({
   selector: 'app-buscador',
@@ -13,6 +13,7 @@ import { ValidacionInput } from '../../utils/ValidacionInput';
 export class BuscadorComponent {
   iconSearch=faSearch;
   @Output() pageChange = new EventEmitter<string>();
+  private validacione = inject(InputValidationsService)
 
   changename(query:string) {
     this.pageChange.emit(query);
@@ -20,7 +21,7 @@ export class BuscadorComponent {
 
 
   filtrarLetras(event: any): void {
-    ValidacionInput.filtrarLetras(event);
+    this.validacione.filtrarLetras(event);
   }
 
   

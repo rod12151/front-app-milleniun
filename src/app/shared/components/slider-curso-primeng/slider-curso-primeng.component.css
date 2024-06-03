@@ -1,0 +1,77 @@
+
+.card{
+    margin: 1rem 0;
+    background: none;
+    border: none;
+}
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.pie-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    
+    text-decoration: none;
+    
+}
+.pie-pagina p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 180px;
+    background: rgba(59, 59, 59, 0.349);
+    color: black;
+    border-radius: 10px;
+}
+.pie-pagina p:hover{
+    background: rgb(1, 22, 90);
+    color: rgb(255, 255, 255);
+}
+.titulo{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo h3{
+    color: rgb(6, 32, 88);
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+.titulo p{
+    color: rgb(11, 73, 167);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+@media (max-width: 900px) {
+    .titulo p{
+        color: rgb(11, 73, 167);
+        font-weight: bold;
+    }
+    .titulo h3{
+        color: rgb(6, 32, 88);
+        font-size: 100%;
+        font-weight: bold;
+    }
+    .titulo p{
+        color: rgb(11, 73, 167);
+        font-weight: normal;
+    }
+
+}

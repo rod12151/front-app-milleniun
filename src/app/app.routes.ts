@@ -14,6 +14,7 @@ import { PublicPageComponent } from './pages/public/public-page/public-page.comp
 import { CursosDiplomadosListComponent } from './pages/public/cursos-diplomados-list/cursos-diplomados-list.component';
 import { CursosActualizacionesListComponent } from './pages/public/cursos-actualizaciones-list/cursos-actualizaciones-list.component';
 import { CursosEspecializacionesListComponent } from './pages/public/cursos-especializaciones-list/cursos-especializaciones-list.component';
+import { DetalleCursoComponent } from './pages/public/curso/detalle-curso/detalle-curso.component';
 
 export const routes: Routes = [
     {
@@ -23,14 +24,16 @@ export const routes: Routes = [
             {path:'docentes',component:AdminListDocenteComponent},
             {path:'diplomado',component:CursosDiplomadosListComponent},
             {path:'actualizacion',component:CursosActualizacionesListComponent},
-            {path:'especializacion',component:CursosEspecializacionesListComponent}
+            {path:'especializacion',component:CursosEspecializacionesListComponent},
+            {path: "auth", component: AuthComponent},
+            {path:'curso/:id',component:DetalleCursoComponent}
 
 
         ]
     },
-    {
+    /*{
         path: "auth", component: AuthComponent
-    },
+    },*/
     {
         path: 'admin', component: AdminDashboardComponent,
         children: [

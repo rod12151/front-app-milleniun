@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ValidacionInput } from '../../shared/utils/ValidacionInput';
+import { InputValidationsService } from '../../core/services/helpers/input-validations.service';
+
 
 
 @Component({
@@ -11,14 +12,14 @@ import { ValidacionInput } from '../../shared/utils/ValidacionInput';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  
+  private validacion=inject(InputValidationsService)
   
   form:FormGroup;
   filtrarNumeros(event: any): void {
-    ValidacionInput.filtrarNumeros(event);
+    this.validacion.filtrarNumeros(event);
   }
   filtrarLetras(event: any): void {
-    ValidacionInput.filtrarLetras(event);
+   this.validacion.filtrarLetras(event);
   }
 
   constructor(private fb:FormBuilder){

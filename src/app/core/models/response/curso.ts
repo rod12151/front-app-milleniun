@@ -21,3 +21,8 @@ export interface cursoAndDocentes{
   docentes:docenteResponse[]
 
 }
+export interface datosAdicionales{
+  tipeCurso:tipoCurso,
+  titleSeccion:String,
+  url:String,
+}

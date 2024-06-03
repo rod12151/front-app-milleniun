@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ValidacionInput } from '../../../../shared/utils/ValidacionInput'; 
+
 import { DocenteService } from '../../../../core/services/entities/docente.service';
 import { docenteCreateRequest } from '../../../../core/models/request/docenteRequest';
 import { Router } from '@angular/router';
+import { InputValidationsService } from '../../../../core/services/helpers/input-validations.service';
 @Component({
   selector: 'app-add-docente',
   standalone: true,
@@ -13,13 +14,8 @@ import { Router } from '@angular/router';
 })
 export class AddDocenteComponent {
   formAddDocente:FormGroup;
-  filtrarNumeros(event: any): void {
-    ValidacionInput.filtrarNumeros(event);
-  }
-  filtrarLetras(event: any): void {
-    ValidacionInput.filtrarLetras(event);
-  }
-
+  
+  private validaciones=inject(InputValidationsService)
   constructor(private fb:FormBuilder,private docenteServicio:DocenteService,private router:Router){
     this.formAddDocente=this.fb.group({
       dni:new FormControl('',[Validators.required,Validators.minLength(8),Validators.maxLength(8) ]),
@@ -29,6 +25,12 @@ export class AddDocenteComponent {
       password:new FormControl('',[Validators.required,Validators.minLength(8)]),
       especialidad:new FormControl('',[Validators.required])
     })
+  }
+  filtrarNumeros(event: any): void {
+    this.validaciones.filtrarNumeros(event);
+  }
+  filtrarLetras(event: any): void {
+    this.validaciones.filtrarLetras(event);
   }
   onSubmit(){
     if(this.formAddDocente.valid){

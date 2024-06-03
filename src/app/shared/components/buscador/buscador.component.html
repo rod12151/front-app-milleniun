@@ -4,12 +4,11 @@
         placeholder="buscar"
         (input)="filtrarLetras($event)"
         #SearchInput
-        
-        
-        (ended)="changename(SearchInput.value)">
+        (keyup.enter)="changename(SearchInput.value)"
+        >
         
     </div>
-    <div class="icon" (click)="changename(SearchInput.value)">
+    <div class="icon" (click)="changename(SearchInput.value)" >
         <a> <fa-icon [icon]=iconSearch class="icono"></fa-icon>
 
         </a>
