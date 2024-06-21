@@ -1,0 +1,73 @@
+.todo{
+    margin: 20px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background:rgba(42, 111, 151, 0.767);
+  }
+  .container{
+    display: grid;
+    gap: 3rem;
+    grid-auto-rows: 14rem;
+    grid-template-columns: repeat(auto-fill, minmax(14rem,1fr));
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  
+  }
+  .item{
+    background: #33415c;
+      
+    border-radius: 20px;
+  }
+  .item:hover{
+    cursor: pointer;
+    background: black;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    background: #5c677d ;
+  }
+  
+  mat-divider{
+    border: 2px;
+  }
+  .title h3 {
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+  }
+  .icon fa-icon{
+    color: white;
+  }
+  .item:hover .title h3{
+    color: rgb(0, 0, 0);
+  }
+  .item:hover .card{
+    background:  rgb(255, 255, 255);
+  }
+  .item:hover .icon fa-icon{
+    color: rgb(0, 0, 0);
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        gap: 0.3rem; /* Reduce gap for smaller screens */
+  
+    }
+  
+    .item {
+        scale: 0.6; /* Reduce margin for smaller screens */
+        transition: all 500ms ease-in-out;
+    }
+    .item .icon fa-icon{
+      font-size: 50px;
+    }
+  }

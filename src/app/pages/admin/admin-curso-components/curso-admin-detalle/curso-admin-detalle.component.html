@@ -1,0 +1,80 @@
+@if (idCurso) {
+    <section class="curso">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Detalle Curso
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+            
+           
+        
+        
+        @if (curso!=undefined) {
+        <div class="parent">
+            <div class="div1">
+                <p>Nombre Curso</p>
+                <p>{{curso.nombre}}</p>
+            </div>
+            <div class="div2">
+                <p>Tipo Curso</p>
+                <p>{{curso.tipoCurso}} </p>
+            </div>
+            <div class="div3"> 
+                <p>Modalidad Curso</p>
+                <p>{{curso.modalidad}}</p>
+            </div>
+            <div class="div4">
+                <p>Estado</p>
+                <p>{{curso.activo}} </p>
+            </div>
+            <div class="div5"> 
+                <p>Detalle Curso</p>
+                <p>{{curso.detalle}}</p>
+            </div>
+            <div class="div6">
+                <p>Fecha de Inicio</p>
+                <p>{{curso.fechaInicio}} </p>
+            </div>
+            <div class="div7">
+                <p>Fecha Finalizacion</p>
+                <p>{{curso.fechaFin}} </p>
+            </div>
+            <div class="div8">
+                <p>Precio</p>
+                <p><span matTextPrefix>S/&nbsp;</span>{{curso.precio}} </p>
+            </div>
+        </div>
+
+        }
+    </mat-expansion-panel>
+        <div class="options">
+            <button (click)="creteModuleBoolean=true">Agregar Modulo</button>
+            <button> Editar Curso</button>
+            <button (click)="navegateVolver()"> Volver </button>
+    
+        </div>
+    </section>
+}
+
+@if (creteModuleBoolean) {
+    
+<app-add-modulo [idCursoInput]="idCurso" (creacionCompletada)="ocultarCrearModulo()"></app-add-modulo>
+}
+<section class="modulo">
+    @for (modulo of modulos; track $index) {
+
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{modulo.nombre}}
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+            <app-view-modulo [moduloResponse]="modulo"></app-view-modulo>
+           
+          </mat-expansion-panel>
+    
+}
+</section>

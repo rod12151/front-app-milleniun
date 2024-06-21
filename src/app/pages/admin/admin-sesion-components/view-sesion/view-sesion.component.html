@@ -1,0 +1,40 @@
+@if (session) {
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           Sesión {{session.numOrden}}
+          </mat-panel-title>
+          
+        </mat-expansion-panel-header>
+        <div class="content">
+            <div class="parent">
+                <div class="div1"> 
+                    <h3>detalle</h3>
+                    <p>{{session.description}}</p>
+                </div>
+                <div class="div2"> 
+                    <h3>material</h3>
+                    <p>{{session.material}}</p>
+                </div>
+                <div class="div3"> 
+                    <h3>docente</h3>
+                    <p>nombre: {{session.docente.name}} {{session.docente.lastName}}</p>
+                    <p>Especialidad: {{session.docente.especialidad}}</p>
+                    <p>image: {{session.docente.avatar}}</p>
+                </div>
+                <div class="div4">                     
+                    <p>fecha : {{fechaAndHora(session.inicioSession)}}</p>
+                </div>
+                </div>
+        </div>
+        <div class="botones">
+            <button>editar</button>
+            <button>eliminar</button>
+    
+        </div>
+       
+      </mat-expansion-panel>
+
+    
+}
+

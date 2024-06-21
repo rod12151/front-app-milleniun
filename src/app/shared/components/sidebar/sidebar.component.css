@@ -14,6 +14,11 @@
     object-fit: cover;
     margin-bottom: 10px;
 }
+.sidenav-header span {
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
 
 .header-text {
     height: 3rem;

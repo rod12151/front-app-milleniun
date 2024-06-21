@@ -15,6 +15,10 @@ import { CursosDiplomadosListComponent } from './pages/public/cursos-diplomados-
 import { CursosActualizacionesListComponent } from './pages/public/cursos-actualizaciones-list/cursos-actualizaciones-list.component';
 import { CursosEspecializacionesListComponent } from './pages/public/cursos-especializaciones-list/cursos-especializaciones-list.component';
 import { DetalleCursoComponent } from './pages/public/curso/detalle-curso/detalle-curso.component';
+import { DetalleDocenteComponent } from './pages/public/docente/detalle-docente/detalle-docente.component';
+import { AddCursoComponent } from './pages/admin/admin-curso-components/add-curso/add-curso.component';
+import { ListCursoComponent } from './pages/admin/admin-curso-components/list-curso/list-curso.component';
+import { CursoAdminDetalleComponent } from './pages/admin/admin-curso-components/curso-admin-detalle/curso-admin-detalle.component';
 
 export const routes: Routes = [
     {
@@ -26,7 +30,8 @@ export const routes: Routes = [
             {path:'actualizacion',component:CursosActualizacionesListComponent},
             {path:'especializacion',component:CursosEspecializacionesListComponent},
             {path: "auth", component: AuthComponent},
-            {path:'curso/:id',component:DetalleCursoComponent}
+            {path:'curso/:id',component:DetalleCursoComponent},
+            {path:'docente/:id',component:DetalleDocenteComponent}
 
 
         ]
@@ -45,6 +50,10 @@ export const routes: Routes = [
             { path: 'curso', component: AdminCursoComponent },
             { path: 'docente/create-docente', component: AddDocenteComponent },
             { path: 'docente/list-docente', component: AdminListDocenteComponent },
+            { path: 'curso/create-curso',component: AddCursoComponent},
+            { path: 'curso/list-curso',component: ListCursoComponent},
+            { path: 'curso/detalle/:id',component: CursoAdminDetalleComponent},
+
         ]
     }
 

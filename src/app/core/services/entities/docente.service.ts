@@ -21,4 +21,11 @@ export class DocenteService {
   public optenerListaDocentes():Observable<docenteResponse[]>{
     return this.http.get<docenteResponse[]>(`${baserUrl}/docente/list`)
   }
+  public optenerDocentePorID(id:number):Observable<docenteResponse>{
+    return this.http.get<docenteResponse>(`${baserUrl}/deocente/public/docente/${id}`)
+
+  }
+  public optenerDocentePorName(name:string):Observable<docenteResponse[]>{
+    return this.http.get<docenteResponse[]>(`${baserUrl}/docente/docente/name?nombre=${name}`)
+  }
 }

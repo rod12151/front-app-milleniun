@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { cursoAndDocentes, cursoResponse, tipoCurso } from '../../models/response/curso';
 import { Observable } from 'rxjs';
-import { paginationResponse, queryRequestCurso } from '../../models/response/paginationResponse';
+import { paginationResponse, queryRequestCompleteCurso, queryRequestCurso } from '../../models/response/paginationResponse';
 import { HttpClient } from '@angular/common/http';
 import baserUrl from '../auth/authHelper';
+import { cursoCreateRequest } from '../../models/request/cursoRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,12 @@ export class CursoService {
 
     return this.http.get<paginationResponse<cursoResponse>>
       (`${baserUrl}/curso/public/listPage?type=${query.type}&name=${query.name}&page=${query.page}&size=${query.size}`)
+
+  }
+  public optenerListaCursosPaginadoAndStatus(query: queryRequestCompleteCurso): Observable<paginationResponse<cursoResponse>> {
+
+    return this.http.get<paginationResponse<cursoResponse>>
+      (`${baserUrl}/curso/listPage?type=${query.type}&name=${query.name}&page=${query.page}&size=${query.size}&status=${query.status}`)
 
   }
 
@@ -35,6 +42,12 @@ export class CursoService {
   }
   public detalleCurso(id:number):Observable<cursoResponse>{
     return this.http.get<cursoResponse>(`${baserUrl}/curso/public/curso/${id}`)
+  }
+  public curso(id:number):Observable<cursoResponse>{
+    return this.http.get<cursoResponse>(`${baserUrl}/curso/curso/${id}`)
+  }
+  public crearCurso(data:cursoCreateRequest,idAdmin:number):Observable<cursoResponse>{
+    return this.http.post<cursoResponse>(`${baserUrl}/curso/create?idAdmin=${idAdmin}`,data)
   }
 }
 

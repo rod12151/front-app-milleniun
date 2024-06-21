@@ -1,0 +1,111 @@
+<div class="form-body">
+    <h3>CREAR Sesion</h3>
+    <mat-form-field>
+        <mat-label>Buscar Usuario</mat-label>
+        <input type="text" matInput [formControl]="searchUserInput" (ngModelChange)="searchDocente()" />
+    </mat-form-field>
+
+
+    <div class="tabla">
+        <table class="tabla-result">
+            <thead>
+                <tr>
+                    <th>seleccion</th>
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of docentes">
+                    <td><input type="radio" [checked]="docenteSelect===d"
+                                (change)="usuarioSeleccionado(d)" /></td>
+                    <td>{{ d.dni }}</td>
+                    <td>{{ d.name+ ' '+d.lastName }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form [formGroup]="formSesion" (submit)="onSubmit()" class="formulario">
+
+        <div class="container">
+            <div class="item">
+                
+                <mat-form-field class="inputs" appearance="outline">
+                    <mat-label>Descripcion:</mat-label>
+                    <textarea formControlName="description" name="description" required matInput
+                        placeholder="digite el description de la sesión" autocomplete="off"></textarea>
+
+
+                    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="text-danger">
+                        <div *ngIf="description.errors?.['required']">
+                            la descripción es requerido.
+                        </div>
+                    </div>
+                </mat-form-field>
+
+
+                <mat-form-field class="inputs" appearance="outline">
+                    <mat-label>material</mat-label>
+                    <input matInput type="text" name="material" placeholder="ingrese la ruta del material"
+                        formControlName="material" autocomplete="off">
+                    <div *ngIf="material.invalid && (material.dirty || material.touched)" class="text-danger">
+                        <div *ngIf="material.errors?.['required']">
+                            El material es requerido.
+                        </div>
+                    </div>
+                </mat-form-field>
+            </div>
+            <div class="item">
+
+
+                <mat-form-field class="inputs" appearance="outline">
+
+                    <mat-label>Estado de la session</mat-label>
+                    <mat-select formControlName="status" name="status" required>
+                        @for (item of estadosTipe; track item) {
+                        <mat-option [value]="item.value">{{item.viewValue}}
+
+                        </mat-option>
+
+                        }
+
+                    </mat-select>
+
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="fecha">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <div class="inputs" appearance="outline">
+                    <label for="inicioSession">Inicio de Sesion:</label>
+                    <input formControlName="inicioSession" type="time" name="inicioSession" #inicioSession required
+                        placeholder="digite el inicioSession del curso" autocomplete="off">
+                </div>
+                <div class="inputs" appearance="outline">
+                    <label for="finalSession">Final de Session:</label>
+                    <input type="time" formControlName="finalSession" name="finalSession" #finalSession required
+                        placeholder="digite el finalSession del curso" autocomplete="off">
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="boton">
+            <button class="btn btn-success" (submit)="onSubmit()" [disabled]="formSesion.invalid">crear</button>
+            <button class="btn btn-danger" (click)="onCancel()">cancelar</button>
+        </div>
+
+
+
+
+    </form>
+
+</div>

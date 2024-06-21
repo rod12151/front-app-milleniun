@@ -1,0 +1,78 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+
+.div1 {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.div1 h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.div1 p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.div2 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Agrega un espacio entre los botones */
+}
+
+.div2 button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.div2 button:hover {
+    background-color: #0056b3;
+}
+
+/* Colores diferentes para los botones "editar" y "eliminar" */
+.div2 button:nth-child(1) {
+    background-color: #28a745; /* Verde */
+}
+
+.div2 button:nth-child(1):hover {
+    background-color: #218838;
+}
+
+.div2 button:nth-child(2) {
+    background-color: #dc3545; /* Rojo */
+}
+
+.div2 button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+
+@media (max-width: 700px) {
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .div1, .div2{
+        grid-area: auto / auto / auto / auto;
+    }
+    
+}

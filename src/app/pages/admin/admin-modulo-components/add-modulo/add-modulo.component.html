@@ -1,0 +1,30 @@
+<div class="form-body">
+    <h3>Crear Modulo</h3>
+    <form [formGroup]="formModulo" (submit)="onSubmit()">
+        <div class="container">
+
+            <mat-form-field class="inputs" appearance="outline">
+                <mat-label>NOMBRE:</mat-label>
+                <textarea matInput formControlName="nombre" type="text" name="nombre" placeholder="digite el nombre"
+                    autocomplete="off"> </textarea>
+
+            </mat-form-field>
+
+            <mat-form-field class="inputs" appearance="outline">
+                <mat-label>Detalle:</mat-label>
+                <textarea matInput formControlName="detalle" type="text" name="detalle" placeholder="digite el detalle"
+                    autocomplete="off"> </textarea>
+
+            </mat-form-field>
+
+        </div>
+        <div class="boton">
+            <button class="btn btn-success" (submit)="onSubmit()" [disabled]="formModulo.invalid">crear</button>
+            <button class="btn btn-danger" (click)="onCancel()">cancelar</button>
+
+
+        </div>
+
+    </form>
+
+</div>

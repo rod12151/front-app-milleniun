@@ -1,17 +1,23 @@
 
 <mat-toolbar  [class.class-touch]="collapsed()" >
-    <button (click)="collapsed.set(!collapsed())">
-        @if (collapsed()) {
-            <fa-icon [icon]=iconArrowRight></fa-icon>
-        }@if (!collapsed()) {
-            <fa-icon [icon]=iconArrowLeft></fa-icon>
-        }
+    <div>
+        <button (click)="collapsed.set(!collapsed())">
         
+            <fa-icon [icon]=iconSlider></fa-icon>
     </button>
+    </div>
+    <div class="info-user">
+        <a routerLink="">Inicio</a>
+        <a routerLink="" (click)="cerrarSesion()">Cerrar Sesion</a>
+        
+    </div>
+   
+    
         
    
 
 </mat-toolbar>
+
 <mat-sidenav-container >
     <mat-sidenav mode="side" opened [style.width]="sidenavWidth()">
         

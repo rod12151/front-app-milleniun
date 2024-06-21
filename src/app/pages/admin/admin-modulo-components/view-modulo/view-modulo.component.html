@@ -1,0 +1,26 @@
+@if (moduloResponse) {
+<div class="parent">
+    <div class="div1">
+        <h4>Detalle</h4>
+        <p>{{moduloResponse.detalle}}</p>
+    </div>
+    <div class="div2">
+        <button>editar</button>
+        <button>eliminar</button>
+        <button (click)="creteSesionBoolean=true">agregar Sesion</button>
+    </div>
+</div>
+@if (creteSesionBoolean) {
+
+<app-add-sesion [idModuloinput]="moduloResponse.idModulo" [idAdmin]="admin.id" (sesionCompletada)="ocultarCreateSesion()"></app-add-sesion>
+
+
+}
+<section>
+    @for (sesion of sesions; track $index) {
+        <app-view-sesion [session]="sesion"></app-view-sesion>
+    }
+</section>
+
+
+}

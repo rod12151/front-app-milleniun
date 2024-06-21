@@ -1,0 +1,95 @@
+<div class="curso-list">
+    @if (paginationRequest) {
+    <div>
+        <app-buscador class="paginator" (pageChange)="onNameSearch($event)"></app-buscador>
+    </div>
+
+    <div class="list-cuerpo grid-container">
+        <div>
+            <form [formGroup]="formBusqueda">
+
+
+            <mat-form-field class="inputs" appearance="outline">
+                <mat-label>Tipo Curso:</mat-label>
+                <mat-select formControlName="tipo" name="tipo" required (selectionChange)="optenerCursosPaginados(0)">
+                    @for (item of curso; track item) {
+                    <mat-option [value]="item.value" >{{item.viewValue}}
+
+                    </mat-option>
+
+                    }
+
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="inputs" appearance="outline">
+                <mat-label>EStado:</mat-label>
+                <mat-select formControlName="estado"  name="estado" required (selectionChange)="optenerCursosPaginados(0)"  >
+                    @for (item of status; track item) {
+                    <mat-option [value]="item.value"  >{{item.viewValue}}
+
+                    </mat-option>
+
+                    }
+
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="inputs" appearance="outline">
+                <mat-label>Cursos Por Página</mat-label>
+                <mat-select formControlName="cantidad" name="cantidad" required (selectionChange)="optenerCursosPaginados(0)" >
+                    @for (item of numPages; track item) {
+                    <mat-option [value]="item.value" >{{item.viewValue}}
+
+                    </mat-option>
+
+                    }
+
+                </mat-select>
+            </mat-form-field>
+        </form>
+        </div>
+        <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Duración</th>
+                  <th>Fecha Inicio</th>
+                  <th>Fecha Fin</th>
+                  <th>Tipo Curso</th>
+                  <th>Modalidad</th>
+                  <th>Precio</th>
+                  <th>Activo</th>
+                  <th>accion</th>
+                </tr>
+              </thead>
+              @for (item of datosCurso; track $index) {
+              <tbody>
+                <tr>
+                  <td>{{item.id}}</td>
+                  <td>{{item.nombre}}</td>
+                  <td>{{item.duration}}</td>
+                  <td>{{item.fechaInicio}}</td>
+                  <td>{{item.fechaFin}}</td>
+                  <td>{{item.tipoCurso}}</td>
+                  <td>{{item.modalidad}}</td>
+                  <td>{{item.precio}}</td>
+                  <td>{{item.activo? 'Sí' : 'No'}}</td>
+                  <td><button (click)="navegate(item.id)">editar</button></td>
+                </tr>
+                <!-- Agrega más filas según sea necesario -->
+              </tbody>
+            }
+            </table>
+          </div>
+    </div>
+
+    <div class="paginator">
+        <app-pagination [data]="paginationRequest" (pageChange)="onPageCahnge($event)"></app-pagination>
+    </div>
+
+
+    }@else {
+    <div class="loading-container">Loading....</div>
+    }
+</div>

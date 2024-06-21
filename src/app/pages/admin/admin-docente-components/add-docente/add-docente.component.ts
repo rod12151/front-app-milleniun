@@ -5,6 +5,8 @@ import { DocenteService } from '../../../../core/services/entities/docente.servi
 import { docenteCreateRequest } from '../../../../core/models/request/docenteRequest';
 import { Router } from '@angular/router';
 import { InputValidationsService } from '../../../../core/services/helpers/input-validations.service';
+import { response } from 'express';
+import { docenteResponse } from '../../../../core/models/docente';
 @Component({
   selector: 'app-add-docente',
   standalone: true,
@@ -14,6 +16,7 @@ import { InputValidationsService } from '../../../../core/services/helpers/input
 })
 export class AddDocenteComponent {
   formAddDocente:FormGroup;
+  docente?:docenteResponse;
   
   private validaciones=inject(InputValidationsService)
   constructor(private fb:FormBuilder,private docenteServicio:DocenteService,private router:Router){
@@ -37,11 +40,16 @@ export class AddDocenteComponent {
       const request = this.formAddDocente.value as docenteCreateRequest;
       this.docenteServicio.guardarDocente(request).subscribe({
         next:(response)=>{
+          this.docente=response;
           console.log(response);
           
         },
         error:(eroor)=>{
           console.log(eroor)
+        },
+        complete:()=>{
+          const id=this.docente?.id
+          this.router.navigate(['admin/docente'])
         }
       })
     }

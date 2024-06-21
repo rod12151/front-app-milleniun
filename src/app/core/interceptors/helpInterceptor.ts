@@ -23,5 +23,6 @@ export const urlStatics =[
     `${baserUrl}/curso/public/listCursosAndDocentes`,
     `${baserUrl}/curso/public/listPage/cursosAndDocentes`,
     
-    `${baserUrl}/curso/public/curso/`
+    `${baserUrl}/curso/public/curso/`,
+    `${baserUrl}/modulo/public/modulo/`
 ]

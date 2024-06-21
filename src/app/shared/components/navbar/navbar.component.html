@@ -1,6 +1,7 @@
 <header>
     <div class="container">
         <nav class="nav_checkbox">
+            
             <a routerLink="" class="logo">
                 <fa-icon [icon]="icon"></fa-icon>
                 <h2>LOGO</h2>
@@ -25,12 +26,15 @@
                 <li><a routerLink="docentes">DOCENTES</a></li>
                 <li><a routerLink="">SERVICIOS</a></li>
                 @if (isLogin()) {
+                    <li><a routerLink="admin" >DASHBOARD</a></li>
                     <li><a routerLink="" (click)="logout()">cerrar Sesion </a></li>
+                    
                 }
                 @if(!isLogin()){
                     <li><a routerLink="auth">LOGIN</a></li>                
                 
                 }
+                
                 
 
             </ul>

@@ -1,9 +1,6 @@
 import { Component, Inject, signal } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUserTie,faUsersViewfinder,faMagnifyingGlass,faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import {MatIcon}  from '@angular/material/icon'
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
 import { Router } from '@angular/router';
 export type MenuItem = {
   
@@ -15,7 +12,7 @@ export type MenuItem = {
 @Component({
   selector: 'app-admin-docente',
   standalone: true,
-  imports: [FontAwesomeModule,MatDividerModule,MatButtonModule,MatIcon],
+  imports: [FontAwesomeModule],
   templateUrl: './admin-docente.component.html',
   styleUrl: './admin-docente.component.css'
 })
@@ -52,6 +49,7 @@ export class AdminDocenteComponent {
   redirect(ruta:any){
     if(ruta!=null){
       const rutaFinal='/admin/'+ruta
+      console.log(rutaFinal)
       this.router.navigate([rutaFinal])
     }
   }

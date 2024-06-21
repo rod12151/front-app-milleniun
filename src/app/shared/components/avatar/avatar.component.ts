@@ -4,6 +4,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { docenteResponse } from '../../../core/models/docente';
 import { UrlSafeService } from '../../../core/services/helpers/urlSafe.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-avatar',
   standalone: true,
@@ -16,7 +17,9 @@ export class AvatarComponent implements OnInit{
   labelShow:Number=0;
   dataAvatar: docenteResponse[] = []
   num = 0
-  constructor(private urlSafe:UrlSafeService){}
+  constructor(private urlSafe:UrlSafeService,
+    private route:Router
+  ){}
   ngOnInit(): void {
       this.separarData(this.perfiles)
   }
@@ -41,6 +44,11 @@ export class AvatarComponent implements OnInit{
   }
   sale(){
     this.labelShow=0
+  }
+  detalleDocente(id:Number){
+    if(id!=undefined){
+      this.route.navigate([`docente/${id}`])
+    }
   }
 
 }

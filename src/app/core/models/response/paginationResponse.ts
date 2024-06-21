@@ -47,6 +47,13 @@ export interface queryRequestCurso{
   page:number;
   size:number
 }
+export interface queryRequestCompleteCurso{
+  type:tipoCurso;
+  name:string;
+  page:number;
+  size:number;
+  status:boolean
+}
 export interface queryRequestDocente{
   name:string;
   page:number;
