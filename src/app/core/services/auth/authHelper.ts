@@ -1,4 +1,4 @@
-let baserUrl='3.17.62.147'
+let baserUrl='http://localhost:8080'
 export default baserUrl;
 
 export interface DecodeToken{
