@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AdminListDocenteComponent } from "../../admin/admin-docente-components/admin-list-docente/admin-list-docente.component";
 import { CursosListComponent } from "../cursos-list/cursos-list.component";
 import { docenteResponse } from '../../../core/models/docente';
-import { SliderComponent } from "../../../shared/components/slider/slider.component";
+
 import { SliderPrimengComponent } from "../../../shared/components/slider-primeng/slider-primeng.component";
 import { AvatarComponent } from "../../../shared/components/avatar/avatar.component";
 import { cursoAndDocentes, cursoResponse, datosAdicionales } from '../../../core/models/response/curso';
-import { CardCursoPrimengComponent } from "../../../shared/components/card-curso-primeng/card-curso-primeng.component";
+
 import { CardCursoComponent } from "../../../shared/components/card-curso/card-curso.component";
 import { SliderCursoPrimengComponent } from "../../../shared/components/slider-curso-primeng/slider-curso-primeng.component";
 import { CursoService } from '../../../core/services/entities/curso.service';
@@ -15,7 +15,7 @@ import { CursoService } from '../../../core/services/entities/curso.service';
     standalone: true,
     templateUrl: './public-page.component.html',
     styleUrl: './public-page.component.css',
-    imports: [AdminListDocenteComponent, CursosListComponent, SliderComponent, SliderPrimengComponent, AvatarComponent, CardCursoPrimengComponent, CardCursoComponent, SliderCursoPrimengComponent]
+    imports: [AdminListDocenteComponent, CursosListComponent, SliderPrimengComponent, AvatarComponent,  CardCursoComponent, SliderCursoPrimengComponent]
 })
 export class PublicPageComponent  implements OnInit{
  

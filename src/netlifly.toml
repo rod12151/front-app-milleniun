@@ -1,0 +1,5 @@
+[build]
+  command = "ng build"
+  functions = "netlify/fuctions"
+  publish = "dist/front-app-milleniun/browser"
+
