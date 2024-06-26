@@ -1,4 +1,4 @@
-let baserUrl='https://3.145.98.70:8080/'
+let baserUrl='https://www.appmillenium.line.pm/'
 //let baserUrl = 'http://localhost:8080'
 export default baserUrl;
 
