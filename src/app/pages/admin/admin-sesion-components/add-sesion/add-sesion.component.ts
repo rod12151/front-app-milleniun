@@ -117,6 +117,9 @@ export class AddSesionComponent {
         this.sessionService.crearSesion(request,this.idAdmin).subscribe({
           next:data=>{
             console.log(data)
+          },
+          complete:()=>{
+            this.sesionCompletada.emit()
           }
         })
       }

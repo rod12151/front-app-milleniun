@@ -8,7 +8,7 @@
             }
 
             <div class="imagen" (mouseenter)="entra(item.id)" (mouseleave)="sale()" (click)="detalleDocente(item.id)">
-                @if (item.avatar.length>0) {
+                @if (item.avatar) {
                 <img [src]="optenerUrlSegurp(item.avatar)" />
                 }@else {
                     <div class="span">
