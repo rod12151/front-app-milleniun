@@ -19,19 +19,21 @@ import { DetalleDocenteComponent } from './pages/public/docente/detalle-docente/
 import { AddCursoComponent } from './pages/admin/admin-curso-components/add-curso/add-curso.component';
 import { ListCursoComponent } from './pages/admin/admin-curso-components/list-curso/list-curso.component';
 import { CursoAdminDetalleComponent } from './pages/admin/admin-curso-components/curso-admin-detalle/curso-admin-detalle.component';
+import { ListDocenteComponent } from './pages/public/docente/list-docente/list-docente.component';
 
 export const routes: Routes = [
     {
         path: '', component: PublicLayoutComponent,
         children: [
             {path:'',component:PublicPageComponent},
-            {path:'docentes',component:AdminListDocenteComponent},
+            {path:'docentes',component:ListDocenteComponent},
             {path:'diplomado',component:CursosDiplomadosListComponent},
             {path:'actualizacion',component:CursosActualizacionesListComponent},
             {path:'especializacion',component:CursosEspecializacionesListComponent},
             {path: "auth", component: AuthComponent},
             {path:'curso/:id',component:DetalleCursoComponent},
-            {path:'docente/:id',component:DetalleDocenteComponent}
+            {path:'docente/:id',component:DetalleDocenteComponent},
+            
 
 
         ]

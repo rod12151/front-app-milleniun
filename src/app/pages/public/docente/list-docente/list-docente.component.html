@@ -1,0 +1,25 @@
+<div class="docente-list">
+    @if (paginationRequest&&response) {
+    <div>
+      <app-buscador class="paginator" (pageChange)="onNameSearch($event)"></app-buscador>
+    </div>
+  
+    <div class="list-cuerpo grid-container">
+      @for (item of datosDocentes; track $index) {
+  
+      <app-card-perfil-docente [perfil]="item"></app-card-perfil-docente>
+  
+  
+  
+      }
+    </div>
+  
+    <div class="paginator">
+      <app-pagination [data]="paginationRequest" (pageChange)="onPageCahnge($event)"></app-pagination>
+    </div>
+  
+  
+    }@else {
+    <div class="loading-container">Loading....</div>
+    }
+  </div>

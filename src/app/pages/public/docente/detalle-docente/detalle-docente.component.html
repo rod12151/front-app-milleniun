@@ -1,8 +1,30 @@
-<p>detalle-docente works!</p>
 @if (docente!=undefined) {
-    <p>{{docente.dni}}</p>
-    <p>{{docente.email}}</p>
-    <p>{{docente.especialidad}}</p>
-    <p>{{docente.fechaInscription}}</p>
-    <p>{{docente.review}}</p>
+<div class="body">
+
+
+    <div class="docente-card">
+        <div class="avatar">
+            <img [src]="docente.avatar" alt="Avatar">
+        </div>
+        <div class="docente-details">
+            <div><strong>Nombre:</strong> {{docente.name}} {{docente.lastName}}</div>
+            <div><strong>Email: </strong> {{docente.email}}</div>
+            <div><strong>Género: </strong> {{docente.genero}}</div>
+            <div><strong>Especialidad:</strong> {{docente.especialidad}}</div>
+            <div><strong>Docente desde: </strong> {{docente.fechaInscription}}</div>
+        </div>
+        <div class="review">
+            <strong>Review</strong>
+            <p>{{docente.review}}</p>
+
+        </div>
+    </div>
+    <div>
+        <h2>cursos impartidos por el instructor</h2>
+
+    </div>
+    <div>
+        <h2>reseñas</h2>
+    </div>
+</div>
 }

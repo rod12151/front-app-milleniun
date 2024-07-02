@@ -4,6 +4,7 @@
         placeholder="buscar"
         (input)="filtrarLetras($event)"
         #SearchInput
+        (change)="changename(SearchInput.value)"
         (keyup.enter)="changename(SearchInput.value)"
         >
         

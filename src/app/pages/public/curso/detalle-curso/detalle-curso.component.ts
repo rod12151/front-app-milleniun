@@ -8,11 +8,12 @@ import { ModuloResponse } from '../../../../core/models/response/modulo';
 import { DateTimeService } from '../../../../core/services/helpers/date-time.service';
 import { SessionService } from '../../../../core/services/entities/session.service';
 import { SessionResponse } from '../../../../core/models/response/session';
+import { AvatarComponent } from '../../../../shared/components/avatar/avatar.component';
 
 @Component({
   selector: 'app-detalle-curso',
   standalone: true,
-  imports: [MatExpansionModule],
+  imports: [MatExpansionModule,AvatarComponent],
   templateUrl: './detalle-curso.component.html',
   styleUrl: './detalle-curso.component.css'
 })

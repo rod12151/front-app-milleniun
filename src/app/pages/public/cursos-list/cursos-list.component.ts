@@ -1,10 +1,10 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CursoService } from '../../../core/services/entities/curso.service';
 import { paginationRequest, paginationResponse, queryRequestCurso } from '../../../core/models/response/paginationResponse';
 import { cursoAndDocentes, tipoCurso } from '../../../core/models/response/curso';
 import { CardCursoComponent } from "../../../shared/components/card-curso/card-curso.component";
 import { PaginationComponent } from "../../../shared/components/pagination/pagination.component";
-import { promises } from 'node:dns';
+
 import { BuscadorComponent } from "../../../shared/components/buscador/buscador.component";
 
 @Component({

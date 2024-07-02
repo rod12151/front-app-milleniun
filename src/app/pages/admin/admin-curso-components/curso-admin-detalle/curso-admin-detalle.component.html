@@ -14,7 +14,7 @@
         @if (curso!=undefined) {
         <div class="parent">
             <div class="div1">
-                <p>Nombre Curso</p>
+                <p >Nombre Curso</p>
                 <p>{{curso.nombre}}</p>
             </div>
             <div class="div2">
@@ -27,7 +27,7 @@
             </div>
             <div class="div4">
                 <p>Estado</p>
-                <p>{{curso.activo}} </p>
+                <p>{{curso.activo?"publicado":"no publicado"}} </p>
             </div>
             <div class="div5"> 
                 <p>Detalle Curso</p>

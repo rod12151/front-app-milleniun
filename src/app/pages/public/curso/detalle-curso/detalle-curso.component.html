@@ -1,28 +1,26 @@
-<div>
+<div class="detalle-curso">
 
   <section class="curso">
     @if (datosCurso) {
+    <h1> {{datosCurso.nombre}}</h1>
     <div class="parent">
-      <div class="div1">
-        <p>Nombre Curso</p>
-        <p>{{datosCurso.nombre}}</p>
-      </div>
-      <div class="div2">
-        <p>Tipo Curso</p>
-        <p>{{datosCurso.tipoCurso}} </p>
-      </div>
-      <div class="div3">
-        <p>Modalidad Curso</p>
-        <p>{{datosCurso.modalidad}}</p>
-      </div>
-      <div class="div4">
-        <p>Estado</p>
-        <p>{{datosCurso.activo}} </p>
-      </div>
       <div class="div5">
-        <p>Detalle Curso</p>
+        <img [src]="datosCurso.image" style="width: 100%; height: 100%;">
+      </div>
+      <div class="div1">
+        <p>Detalles</p>
         <p>{{datosCurso.detalle}}</p>
       </div>
+      <div class="div2">
+        <p>TIPO DE CURSO: {{datosCurso.tipoCurso}} </p>
+      </div>
+      <div class="div3">
+        <p>MODALIDAD: {{datosCurso.modalidad}}</p>
+      </div>
+      <div class="div4">
+        <p>{{datosCurso.activo?"ACTIVO":"DESACTIVADO"}} </p>
+      </div>
+
       <div class="div6">
         <p>Fecha de Inicio</p>
         <p>{{datosCurso.fechaInicio}} </p>
@@ -41,36 +39,42 @@
   </section>
   <section class="cont-curso">
     <div class="modulo">
-      <h1 style="align-content: center;">modulos del curso</h1>
+      <h2 style="align-content: center;">modulos del curso</h2>
       @for (modulo of datosModulo; track $index) {
       <mat-expansion-panel (opened)="optenerSesiones(modulo.idModulo)" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             {{modulo.nombre}}
           </mat-panel-title>
-          
+
 
         </mat-expansion-panel-header>
+        <mat-panel-description>
+          {{modulo.detalle}}
+        </mat-panel-description>
         <div>
-          <h1>clases del Modulo</h1>
+          <h3>clases del Modulo</h3>
           @for (sesion of sesiones[modulo.idModulo]; track $index) {
+          <h4>clase {{sesion.numOrden}}</h4>
           <div class="content">
+
             <div class="sesion">
               <div class="descripcion">
-                <h3>detalle clase {{sesion.numOrden}}</h3>
+
                 <p>{{sesion.description}}</p>
-              </div>
-              <div class="docente">
-                <h3>docente</h3>
-                <p>nombre: {{sesion.docente.name}} {{sesion.docente.lastName}}</p>
-                <p>Especialidad: {{sesion.docente.especialidad}}</p>
-                <p>image: {{sesion.docente.avatar}}</p>
               </div>
               <div class="fecha">
                 <p>fecha : {{convertirFecha(sesion.inicioSession).fecha}}</p>
-                <p>Hora inicio: {{convertirFecha(sesion.inicioSession).hora}}</p>
-                <p>Hora finalizacion: {{convertirFecha(sesion.finalSession).hora}}</p>
+                <p>{{convertirFecha(sesion.inicioSession).hora}} - {{convertirFecha(sesion.finalSession).hora}}</p>
+                
               </div>
+              <div class="docente">
+                <h4>docente</h4>
+
+                <app-avatar [perfiles]="[sesion.docente]"></app-avatar>
+                <p> {{sesion.docente.especialidad}}</p>
+              </div>
+
             </div>
           </div>
           }

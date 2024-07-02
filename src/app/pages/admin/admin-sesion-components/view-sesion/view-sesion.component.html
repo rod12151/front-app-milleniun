@@ -18,18 +18,19 @@
                 </div>
                 <div class="div3"> 
                     <h3>docente</h3>
-                    <p>nombre: {{session.docente.name}} {{session.docente.lastName}}</p>
-                    <p>Especialidad: {{session.docente.especialidad}}</p>
-                    <p>image: {{session.docente.avatar}}</p>
+                    <app-avatar [perfiles]="[session.docente]"></app-avatar>
+                    <p>{{session.docente.name}} {{session.docente.lastName}}</p>
+                    <p>{{session.docente.especialidad}}</p>
                 </div>
                 <div class="div4">                     
-                    <p>fecha : {{fechaAndHora(session.inicioSession)}}</p>
+                    <p>fecha : {{fechaAndHora(session.inicioSession).fecha}}</p>
+                    <p>hora : {{fechaAndHora(session.inicioSession).hora}}-{{fechaAndHora(session.finalSession).hora}}</p>
                 </div>
                 </div>
         </div>
         <div class="botones">
-            <button>editar</button>
-            <button>eliminar</button>
+            <button class="btn btn-primary">editar</button>
+            <button class="btn btn-danger">eliminar</button>
     
         </div>
        

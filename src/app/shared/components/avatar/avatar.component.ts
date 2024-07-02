@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { docenteResponse } from '../../../core/models/docente';
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-avatar',
   standalone: true,
-  imports: [AvatarModule, AvatarGroupModule],
+  imports: [],
   templateUrl: './avatar.component.html',
   styleUrl: './avatar.component.css'
 })

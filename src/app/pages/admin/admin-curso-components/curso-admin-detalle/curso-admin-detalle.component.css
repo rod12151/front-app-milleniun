@@ -48,6 +48,14 @@
     margin: 5px;
     padding: 5px;
 }
+.parent div p:first-child {
+    font-weight: bold;
+    color: blue;
+}
+.parent div p:nth-child(2) {
+    font-style: italic;
+    color: green;
+}
 
 
 @media (max-width: 700px) {

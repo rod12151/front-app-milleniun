@@ -1,0 +1,75 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.docente-card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.docente-details {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review {
+    grid-area: 1 / 4 / 2 / 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+.avatar img {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+}
+
+
+.docente-details>div {
+    margin-bottom: 10px;
+}
+
+.docente-details strong {
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .docente-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .avatar, .review, .docente-details{
+        grid-area: auto / auto / auto / auto;
+    }
+    
+}

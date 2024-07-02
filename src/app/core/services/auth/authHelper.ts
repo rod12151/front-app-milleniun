@@ -1,4 +1,4 @@
-let baserUrl='https://millenium.line.pm'
+let baserUrl='https://www.millenium.line.pm'
 //let baserUrl = 'http://localhost:8080'
 export default baserUrl;
 
